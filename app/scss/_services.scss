@@ -1,0 +1,67 @@
+.services {
+    background-color: #fff;
+    font-family: "Montserrat-Light";
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.service-list {
+    display: flex;
+}
+
+.service-cart {
+    width: 270px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 30px;
+    position: relative;
+    text-align: center;
+    &:hover {
+        path {
+            fill: $hoverColor;
+        }
+
+        .service-cart__header {
+            color: $hoverColor;
+        }
+
+        ::after {
+            background-color: $hoverColor;;
+        }
+    }
+
+    ::after {
+        background-color: #f1eee9;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        height: 3px;
+        transform: translateX(-50%);
+        transition: all .5s;
+        width: 70px;
+    }
+}
+
+.service-cart__icon {
+    width: 46px;
+    height: 46px;
+    path {
+        fill: $titleColor;
+        transition: all .4s;
+    }
+}
+
+.service-cart__header {
+    font-family: "Raleway-SemiBold";
+    font-size: 22px;
+    color: $titleColor;
+    margin-top: 25px;
+    transition: color .4s;
+}
+
+.service-cart__desc {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.7;
+}

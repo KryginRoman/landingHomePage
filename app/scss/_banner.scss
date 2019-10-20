@@ -1,0 +1,114 @@
+.slider {
+    color: #fff;
+    position: relative;
+}
+
+.slider-item {
+    background-image: url(../images/slide_photo/slide1.jpg);
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+.slider-item::after {
+    background-color: #111;
+    position: absolute;
+    content: "";
+    opacity: .7;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
+
+.slider-content { 
+    max-width: 610px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.slider-content__slogan {
+    font-family: "Raleway-Medium";
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.slider-content__header {
+    font-family: "Raleway-ExtraBold";
+    font-size: 52px;
+    margin-bottom: 15px
+}
+
+.slider-content__desc {
+    font-family: "Montserrat-Light";
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.slider-content__button {
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.slider-arrows {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-arrows__left, .slider-arrows__right {
+    cursor: pointer;
+    height: 75px;
+    position: absolute;
+    top: 0;
+    width: 40px;
+    path {
+        fill: #fff;
+        transition: all .4s;
+    }
+    &:hover {
+        path {
+            fill: #d3c1ad;
+        }
+    }
+}
+
+.slider-arrows__left {
+    left: 7.8%;
+}
+
+.slider-arrows__right {
+    right: 7.8%;
+}
+
+.slider-dots {
+    display: flex;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    &__item {
+        background-color: #fff;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 12px;
+        margin-right: 10px;
+        opacity: .5;
+        transition: all .4s;
+        width: 12px;
+        &:hover {
+            background-color: transparent;
+            border-color: #d3c1ad;
+        }
+    }
+    &__item:last-child {
+        margin-right: 0;
+    }
+}

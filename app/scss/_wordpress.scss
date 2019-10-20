@@ -1,0 +1,28 @@
+.wordpress-them {
+    font-family: "Montserrat-Light";
+    padding-top: 50px;
+    padding-bottom: 50px;
+    & .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.wordpress-title {
+    color: $whiteColor;
+    font-family: "Raleway-Regular";
+    font-size: 28px;
+    & span {
+        color: $hoverColor;
+    }
+}
+
+.wordpress-subtitle {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.wordpress-button {
+    color: $whiteColor;
+}

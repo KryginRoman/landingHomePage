@@ -1,0 +1,382 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #000;
+  color: #8c8c8c;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 300; }
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto; }
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: "Raleway-Regular";
+  font-size: 34px;
+  font-weight: 400; }
+
+.logo__name {
+  display: block;
+  letter-spacing: -1.36px; }
+
+.button {
+  background-color: #998675;
+  box-shadow: inset 0 -3px 0 #998675;
+  border-radius: 3px;
+  display: block;
+  color: inherit;
+  font-family: "Raleway-ExtraBold";
+  font-size: 14px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color .4s;
+  width: 170px; }
+
+.button:hover {
+  background-color: #c7b299; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.link {
+  color: inherit;
+  text-decoration: none;
+  transition: color .4s; }
+
+.link:hover {
+  color: #c7b299; }
+
+.section-header {
+  max-width: 770px;
+  text-align: center; }
+
+.section-title {
+  font-family: "Raleway-SemiBold";
+  font-size: 30px; }
+
+.section-subtitle {
+  font-family: "Montserrat-Light";
+  font-size: 16px;
+  line-height: 28px;
+  margin-top: 20px; }
+
+.small-section {
+  background-color: #f4f5f8;
+  background-image: -webkit-linear-gradient(left, #211b19 0%, #4e3427 100%);
+  background-image: -o-linear-gradient(left, #211b19 0%, #4e3427 100%);
+  background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%); }
+
+.header {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  height: 55px;
+  justify-content: space-between;
+  left: 50%;
+  position: absolute;
+  top: 40px;
+  transform: translateX(-50%);
+  width: 1170px;
+  z-index: 3; }
+
+.nav-panel {
+  display: flex;
+  font-family: "Montserrat-Light";
+  font-weight: 700; }
+
+.nav-menu {
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+  line-height: 1;
+  margin-right: 60px; }
+
+.moves {
+  display: flex; }
+
+.nav-menu__item:not(:last-child) {
+  padding-right: 30px; }
+
+.moves__item:not(:last-child) {
+  display: block;
+  margin-right: 28px; }
+
+.moves__item-cart, .moves__item-search {
+  width: 18px;
+  height: 24px; }
+  .moves__item-cart path, .moves__item-search path {
+    fill: #fff;
+    transition: all .4s; }
+  .moves__item-cart:hover path, .moves__item-search:hover path {
+    fill: #d3c1ad; }
+
+.moves__item-search {
+  width: 24px; }
+
+.slider {
+  color: #fff;
+  position: relative; }
+
+.slider-item {
+  background-image: url(../images/slide_photo/slide1.jpg);
+  background-size: cover;
+  position: relative;
+  height: 100vh; }
+
+.slider-item::after {
+  background-color: #111;
+  position: absolute;
+  content: "";
+  opacity: .7;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%; }
+
+.slider-content {
+  max-width: 610px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  z-index: 2; }
+
+.slider-content__slogan {
+  font-family: "Raleway-Medium";
+  font-size: 36px;
+  margin-bottom: 10px; }
+
+.slider-content__header {
+  font-family: "Raleway-ExtraBold";
+  font-size: 52px;
+  margin-bottom: 15px; }
+
+.slider-content__desc {
+  font-family: "Montserrat-Light";
+  font-size: 16px;
+  line-height: 24px; }
+
+.slider-content__button {
+  margin: 0 auto;
+  margin-top: 40px; }
+
+.slider-arrows {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.slider-arrows__left, .slider-arrows__right {
+  cursor: pointer;
+  height: 75px;
+  position: absolute;
+  top: 0;
+  width: 40px; }
+  .slider-arrows__left path, .slider-arrows__right path {
+    fill: #fff;
+    transition: all .4s; }
+  .slider-arrows__left:hover path, .slider-arrows__right:hover path {
+    fill: #d3c1ad; }
+
+.slider-arrows__left {
+  left: 7.8%; }
+
+.slider-arrows__right {
+  right: 7.8%; }
+
+.slider-dots {
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%); }
+  .slider-dots__item {
+    background-color: #fff;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 12px;
+    margin-right: 10px;
+    opacity: .5;
+    transition: all .4s;
+    width: 12px; }
+    .slider-dots__item:hover {
+      background-color: transparent;
+      border-color: #d3c1ad; }
+  .slider-dots__item:last-child {
+    margin-right: 0; }
+
+.services {
+  background-color: #fff;
+  font-family: "Montserrat-Light";
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+.service-list {
+  display: flex; }
+
+.service-cart {
+  width: 270px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-bottom: 30px;
+  position: relative;
+  text-align: center; }
+  .service-cart:hover path {
+    fill: #c7b299; }
+  .service-cart:hover .service-cart__header {
+    color: #c7b299; }
+  .service-cart:hover ::after {
+    background-color: #c7b299; }
+  .service-cart ::after {
+    background-color: #f1eee9;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 3px;
+    transform: translateX(-50%);
+    transition: all .5s;
+    width: 70px; }
+
+.service-cart__icon {
+  width: 46px;
+  height: 46px; }
+  .service-cart__icon path {
+    fill: #555555;
+    transition: all .4s; }
+
+.service-cart__header {
+  font-family: "Raleway-SemiBold";
+  font-size: 22px;
+  color: #555555;
+  margin-top: 25px;
+  transition: color .4s; }
+
+.service-cart__desc {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 1.7; }
+
+.ideas {
+  background-color: #fbfaf8;
+  padding-top: 80px; }
+
+.ideas-header {
+  margin: 0 auto; }
+
+.ideas-title {
+  color: #555555; }
+
+.ideas-examples {
+  margin-top: 40px;
+  min-height: 480px; }
+
+.ideas-example {
+  max-width: 770px; }
+
+.wordpress-them {
+  font-family: "Montserrat-Light";
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .wordpress-them .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+
+.wordpress-title {
+  color: #fff;
+  font-family: "Raleway-Regular";
+  font-size: 28px; }
+  .wordpress-title span {
+    color: #c7b299; }
+
+.wordpress-subtitle {
+  font-size: 18px;
+  margin-top: 10px; }
+
+.wordpress-button {
+  color: #fff; }
+
+/* Montserrat font */
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/Montserat/Regular/Montserrat-Regular.eot");
+  src: url("../fonts/Montserat/Regular/Montserrat-Regular.eot") format("embedded-opentype"), url("../fonts/Montserat/Regular/Montserrat-Regular.ttf") format("truetype"), url("../fonts/Montserat/Regular/Montserrat-Regular.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("../fonts/Montserat/Light/Montserrat-Light.eot");
+  src: url("../fonts/Montserat/Light/Montserrat-Light.eot") format("embedded-opentype"), url("../fonts/Montserat/Light/Montserrat-Light.ttf") format("truetype"), url("../fonts/Montserat/Light/Montserrat-Light.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+/* Raleway font */
+@font-face {
+  font-family: "Raleway-Thin";
+  src: url("../fonts/Raleway/Thin/Raleway-Thin.eot");
+  src: url("../fonts/Raleway/Thin/Raleway-Thin.eot") format("embedded-opentype"), url("../fonts/Raleway/Thin/Raleway-Thin.ttf") format("truetype"), url("../fonts/Raleway/Thin/Raleway-Thin.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Raleway-ExtraLight";
+  src: url("../fonts/Raleway/ExtraLight/Raleway-ExtraLight.eot");
+  src: url("../fonts/Raleway/ExtraLight/Raleway-ExtraLight.eot") format("embedded-opentype"), url("../fonts/Raleway/ExtraLight/Raleway-ExtraLight.ttf") format("truetype"), url("../fonts/Raleway/ExtraLight/Raleway-ExtraLight.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Raleway-Light";
+  src: url("../fonts/Raleway/Light/Raleway-Light.eot");
+  src: url("../fonts/Raleway/Light/Raleway-Light.eot") format("embedded-opentype"), url("../fonts/Raleway/Light/Raleway-Light.ttf") format("truetype"), url("../fonts/Raleway/Light/Raleway-Light.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url("../fonts/Raleway/Regular/Raleway-Regular.eot");
+  src: url("../fonts/Raleway/Regular/Raleway-Regular.eot") format("embedded-opentype"), url("../fonts/Raleway/Regular/Raleway-Regular.ttf") format("truetype"), url("../fonts/Raleway/Regular/Raleway-Regular.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Raleway-Medium";
+  src: url("../fonts/Raleway/Medium/Raleway-Medium.eot");
+  src: url("../fonts/Raleway/Medium/Raleway-Medium.eot") format("embedded-opentype"), url("../fonts/Raleway/Medium/Raleway-Medium.ttf") format("truetype"), url("../fonts/Raleway/Medium/Raleway-Medium.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Raleway-SemiBold";
+  src: url("../fonts/Raleway/SemiBold/Raleway-SemiBold.eot");
+  src: url("../fonts/Raleway/SemiBold/Raleway-SemiBold.eot") format("embedded-opentype"), url("../fonts/Raleway/SemiBold/Raleway-SemiBold.ttf") format("truetype"), url("../fonts/Raleway/SemiBold/Raleway-SemiBold.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url("../fonts/Raleway/Bold/Raleway-Bold.eot");
+  src: url("../fonts/Raleway/Bold/Raleway-Bold.eot") format("embedded-opentype"), url("../fonts/Raleway/Bold/Raleway-Bold.ttf") format("truetype"), url("../fonts/Raleway/Bold/Raleway-Bold.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Raleway-ExtraBold";
+  src: url("../fonts/Raleway/ExtraBold/Raleway-ExtraBold.eot");
+  src: url("../fonts/Raleway/ExtraBold/Raleway-ExtraBold.eot") format("embedded-opentype"), url("../fonts/Raleway/ExtraBold/Raleway-ExtraBold.ttf") format("truetype"), url("../fonts/Raleway/ExtraBold/Raleway-ExtraBold.eot") format("embedded-opentype");
+  font-style: normal;
+  font-weight: normal; }

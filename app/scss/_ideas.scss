@@ -1,0 +1,24 @@
+.ideas {
+    background-color: #fbfaf8;
+    padding-top: 80px;
+}
+
+.ideas-header {
+    margin: 0 auto;
+}
+
+.ideas-title {
+    color: $titleColor;
+}
+
+.ideas-examples {
+    margin-top: 40px;
+    min-height: 480px;
+}
+
+.ideas-example {
+    max-width: 770px;
+    // &[data-example = "second"] {
+    //     background-color: #000;
+    // }
+}
