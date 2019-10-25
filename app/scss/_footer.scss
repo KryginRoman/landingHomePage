@@ -1,0 +1,94 @@
+.footer {
+    background-color: #191919;
+    font-family: "Montserrat-Light";
+    &-info {
+        display: flex;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    &-logo {
+        color: $whiteColor;
+    }
+    &-column {
+        margin-left: 15px;
+        margin-right: 15px;
+        width: 270px;
+        &__title {
+            color: $whiteColor;
+            font-family: "Raleway-Bold";
+            font-size: 24px;
+        }
+    }
+    &-content {
+        line-height: 1.7;
+        padding-top: 30px;
+    }
+    &-list {
+        list-style: none;
+        &__item {
+            border-bottom: 1px solid #595f6f;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            transition: color .4s;
+            &:last-child {
+                border: none;
+                margin-bottom: 0;
+            }
+            &:hover {
+                color: $hoverColor;
+                .footer-list__date {
+                    color: $whiteColor;
+                }
+            }
+        }
+        &__date {
+            display: block;
+            font-size: 12px;
+            transition: color .4s;
+        }
+        &__text {
+            line-height: 1.4;;
+        }
+    }
+    &-copyright {
+        background-color: #111;
+        padding-bottom: 45px;
+        padding-top: 45px;
+        &__list {
+            display: flex;
+            list-style: none;
+        }
+        &__link {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__read-button {
+        color: $whiteColor;
+        margin-top: 25px;
+    }
+    &__svg-button {
+        path {
+            fill: $whiteColor;
+        }
+    }
+}
+
+.widjets {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -10px;
+    margin-left: -5px;
+    margin-right: -5px;
+    &__item {
+        height: 100px;
+        width: 125px;
+        margin-bottom: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}

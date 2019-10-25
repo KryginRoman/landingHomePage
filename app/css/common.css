@@ -25,9 +25,24 @@ body {
   text-align: center;
   transition: background-color .4s;
   width: 170px; }
+  .button:hover {
+    background-color: #c7b299; }
 
-.button:hover {
-  background-color: #c7b299; }
+.read-button {
+  color: #c7b299;
+  display: inline-block;
+  padding-right: 15px;
+  position: relative;
+  text-decoration: none; }
+  .read-button__svg {
+    height: 8px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 6px;
+    transform: translateY(-50%); }
+    .read-button__svg path {
+      fill: #fff; }
 
 .container {
   max-width: 1170px;
@@ -41,20 +56,17 @@ body {
   display: flex;
   align-items: center;
   font-family: "Raleway-Regular";
-  font-size: 34px;
-  font-weight: 400; }
-
-.logo__name {
-  display: block;
-  letter-spacing: -1.36px; }
+  font-size: 34px; }
+  .logo__name {
+    display: block;
+    letter-spacing: -1.36px; }
 
 .link {
   color: inherit;
   text-decoration: none;
   transition: color .4s; }
-
-.link:hover {
-  color: #c7b299; }
+  .link:hover {
+    color: #c7b299; }
 
 .image {
   display: block;
@@ -64,21 +76,18 @@ body {
 .section {
   padding-bottom: 80px;
   padding-top: 80px; }
-
-.section-header {
-  max-width: 770px;
-  text-align: center; }
-
-.section-title {
-  color: #555555;
-  font-family: "Raleway-SemiBold";
-  font-size: 30px; }
-
-.section-subtitle {
-  font-family: "Montserrat-Light";
-  font-size: 16px;
-  line-height: 28px;
-  padding-top: 20px; }
+  .section-header {
+    max-width: 770px;
+    text-align: center; }
+  .section-title {
+    color: #555555;
+    font-family: "Raleway-SemiBold";
+    font-size: 30px; }
+  .section-subtitle {
+    font-family: "Montserrat-Light";
+    font-size: 16px;
+    line-height: 28px;
+    padding-top: 20px; }
 
 .small-section {
   background-color: #f4f5f8;
@@ -585,8 +594,6 @@ body {
   margin-left: -15px;
   margin-right: -15px;
   padding-top: 40px; }
-  .post-list__arrows {
-    padding-top: 40px; }
 
 .post {
   background-color: #fff;
@@ -641,11 +648,21 @@ body {
     padding-top: 15px;
     transition: all .4s; }
   .post__button {
-    color: #c7b299;
-    display: block;
-    margin-top: 25px;
-    padding-right: 15px;
-    text-decoration: none; }
+    margin-top: 25px; }
+  .post__svg path {
+    fill: #c7b299; }
+  .post-arrows {
+    margin: 0 auto;
+    max-width: 55px;
+    padding-top: 40px; }
+    .post-arrows__item {
+      display: inline-block;
+      border: 2px solid #d1d1d1;
+      border-radius: 50%;
+      height: 22px;
+      width: 22px; }
+      .post-arrows__item_left {
+        margin-right: 5px; }
   .post:hover {
     background-color: #362f2d; }
     .post:hover .post__title {
@@ -658,6 +675,106 @@ body {
       background-color: #c7b299; }
     .post:hover .post-date__month {
       background-color: #a48d72; }
+
+.partners {
+  background-image: url(../images/partners/partners-bg.jpg);
+  background-size: cover;
+  padding-bottom: 135px;
+  padding-top: 135px;
+  position: relative; }
+  .partners::after {
+    background-color: rgba(0, 0, 0, 0.7);
+    content: "";
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0; }
+  .partners-container {
+    position: relative;
+    z-index: 5; }
+  .partners-list {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -15px;
+    margin-right: -15px; }
+    .partners-list__item {
+      width: 270px;
+      margin-left: 15px;
+      margin-right: 15px; }
+
+.footer {
+  background-color: #191919;
+  font-family: "Montserrat-Light"; }
+  .footer-info {
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px; }
+  .footer-logo {
+    color: #fff; }
+  .footer-column {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 270px; }
+    .footer-column__title {
+      color: #fff;
+      font-family: "Raleway-Bold";
+      font-size: 24px; }
+  .footer-content {
+    line-height: 1.7;
+    padding-top: 30px; }
+  .footer-list {
+    list-style: none; }
+    .footer-list__item {
+      border-bottom: 1px solid #595f6f;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      transition: color .4s; }
+      .footer-list__item:last-child {
+        border: none;
+        margin-bottom: 0; }
+      .footer-list__item:hover {
+        color: #c7b299; }
+        .footer-list__item:hover .footer-list__date {
+          color: #fff; }
+    .footer-list__date {
+      display: block;
+      font-size: 12px;
+      transition: color .4s; }
+    .footer-list__text {
+      line-height: 1.4; }
+  .footer-copyright {
+    background-color: #111;
+    padding-bottom: 45px;
+    padding-top: 45px; }
+    .footer-copyright__list {
+      display: flex;
+      list-style: none; }
+    .footer-copyright__link {
+      color: inherit;
+      text-decoration: none; }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between; }
+  .footer__read-button {
+    color: #fff;
+    margin-top: 25px; }
+  .footer__svg-button path {
+    fill: #fff; }
+
+.widjets {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -10px;
+  margin-left: -5px;
+  margin-right: -5px; }
+  .widjets__item {
+    height: 100px;
+    width: 125px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px; }
 
 /* Montserrat font */
 @font-face {
