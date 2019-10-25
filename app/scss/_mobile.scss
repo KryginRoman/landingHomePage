@@ -1,0 +1,48 @@
+.mobile-adaptation {
+    background-image: url(../images/mobile/iphone.png);
+    background-repeat: no-repeat;
+    background-position-x: 22.01%;
+    background-position-y: 75px;
+    background-size: 420px 615px;
+    font-family: "Montserrat-Light";
+    background-color: #fbfaf8;
+    padding-bottom: 185px;
+    padding-top: 185px;
+}
+
+.mobile-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mobile-content {
+    max-width: 670px;
+}
+
+.mobile-description {
+    font-size: 16px;
+    padding-top: 35px;
+}
+
+.mobile-list {
+    list-style: none;
+    padding-left: 50px;
+    padding-top: 40px;
+    &__item {
+        margin-bottom: 12px;
+        padding-left: 50px;
+        position: relative;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__arrow {
+        background-color: $hoverColor;
+        border-radius: 50%;
+        height: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+    }
+}

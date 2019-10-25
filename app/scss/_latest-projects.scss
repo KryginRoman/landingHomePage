@@ -1,53 +1,43 @@
 .projects {
     background-color: $whiteColor;
-    nav {
+    &-header {
+        margin: 0 auto;
+    }
+    &-container {
+        font-family: "Montserrat-Light";
+        padding-top: 40px;
+    }
+    &-nav {
         display: flex;
-        justify-content: center;
-    }
-}
-
-.projects-header {
-    margin: 0 auto;
-}
-
-.projects-container {
-    font-family: "Montserrat-Light";
-    margin-top: 40px;
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
-.projects-nav {
-    display: flex;
-    list-style: none;
-    &__item:not(:last-child) {
-        margin-right: 10px;
-    }
-    &__link {
-        color: inherit;
-        border: 1px solid #ebebeb;
-        border-radius: 5px;
-        display: block;
-        font-size: 14px;
-        padding-bottom: 10px;
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-top: 10px;
-        text-decoration: none;
-        transition: all .4s;
-        &:hover {
-            background-color: $btnBgColor;
-            border-color: $btnBgColor;
-            color: $whiteColor;
+        list-style: none;
+        &__item:not(:last-child) {
+            margin-right: 10px;
+        }
+        &__link {
+            color: inherit;
+            border: 1px solid #ebebeb;
+            border-radius: 5px;
+            display: block;
+            font-size: 14px;
+            padding-bottom: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 10px;
+            text-decoration: none;
+            transition: all .4s;
+            &:hover {
+                background-color: $btnBgColor;
+                border-color: $btnBgColor;
+                color: $whiteColor;
+            }
         }
     }
-}
-
-.projects-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    margin-bottom: -30px;
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        margin-bottom: -30px;
+    }
 }
 
 .project {
@@ -111,7 +101,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    & a {
+    &-link {
         display: block;
         margin-right: 30px;
         &:last-child {
