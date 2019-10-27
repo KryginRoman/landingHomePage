@@ -47,14 +47,14 @@
         &__day {
             background-color: #363636;
             display: block;
-            font-size: 24px;
+            font-size: 2.4rem;
             padding-bottom: 6px;
             padding-top: 6px;
             transition: all .4s;
         }
         &__month {
             display: block;
-            font-size: 12px;
+            font-size: 1.2rem;
             padding-bottom: 6px;
             padding-top: 6px;
             transition: all .4s;
@@ -66,7 +66,7 @@
     &__title {
         color: $titleColor;
         font-family: "Raleway-Medium";
-        font-size: 20px;
+        font-size: 2rem;
         transition: all .4s;
     }
     &__text {
@@ -90,10 +90,29 @@
             border: 2px solid #d1d1d1;
             border-radius: 50%;
             height: 22px;
+            position: relative;
             width: 22px;
+            transition: all .4s;
+            &:hover {
+                border-color: $hoverColor;
+                .post-arrows__svg {
+                    fill: $hoverColor;
+                }
+            }
             &_left {
                 margin-right: 5px;
+                .post-arrows__svg {
+                    transform: translate(-55%, -50%);
+                }
             }
+        }
+        &__svg {
+            fill: #d1d1d1;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-45%, -50%);
+            transition: all .4s;
         }
     }
     &:hover {

@@ -1,5 +1,6 @@
 .footer {
     background-color: #191919;
+    color: $titleColor;
     font-family: "Montserrat-Light";
     &-info {
         display: flex;
@@ -16,7 +17,7 @@
         &__title {
             color: $whiteColor;
             font-family: "Raleway-Bold";
-            font-size: 24px;
+            font-size: 2.4rem;
         }
     }
     &-content {
@@ -29,7 +30,6 @@
             border-bottom: 1px solid #595f6f;
             margin-bottom: 20px;
             padding-bottom: 20px;
-            transition: color .4s;
             &:last-child {
                 border: none;
                 margin-bottom: 0;
@@ -43,24 +43,54 @@
         }
         &__date {
             display: block;
-            font-size: 12px;
+            font-size: 1.2rem;
             transition: color .4s;
         }
         &__text {
-            line-height: 1.4;;
+            line-height: 1.4;
+            transition: color .4s;
+        }
+        &__link {
+            color: #00bff3;
+            text-decoration: none;
+            transition: color .4s;
+            &:hover {
+                color: #959595;
+            }
         }
     }
     &-copyright {
         background-color: #111;
-        padding-bottom: 45px;
-        padding-top: 45px;
+        padding-bottom: 4.5rem;
+        padding-top: 4.5rem;
         &__list {
             display: flex;
             list-style: none;
         }
+        &__item {
+            margin-right: 10px;
+            padding-right: 10px;
+            position: relative;
+            &::after {
+                background-color: $mainColor;
+                content: "";
+                height: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 1px;
+            } 
+            &:last-child {
+                margin-right: 0;
+            }
+        }
         &__link {
             color: inherit;
             text-decoration: none;
+            transition: color .4s;
+            &:hover {
+                color: $hoverColor;
+            }
         }
     }
     &-inner {
@@ -70,10 +100,20 @@
     &__read-button {
         color: $whiteColor;
         margin-top: 25px;
+        transition: all .4s;
+        &:hover {
+            color: $hoverColor; 
+            .footer__svg-button {
+                path {
+                    fill: $hoverColor;
+                }
+            }
+        }
     }
     &__svg-button {
         path {
             fill: $whiteColor;
+            transition: all .4s;
         }
     }
 }
@@ -90,5 +130,22 @@
         margin-bottom: 10px;
         margin-left: 5px;
         margin-right: 5px;
+    }
+}
+
+
+
+.designer-name {
+    margin-right: 10px;
+    padding-right: 10px;
+    position: relative;
+    &::after {
+        background-color: $mainColor;
+        content: "";
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
     }
 }

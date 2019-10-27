@@ -2,6 +2,7 @@
     align-items: center;
     color: $whiteColor;
     display: flex;
+    font-family: "Montserrat-Light";
     height: 55px;
     justify-content: space-between;
     left: 50%;
@@ -14,8 +15,6 @@
 
 .nav-panel {
     display: flex;
-    font-family: "Montserrat-Light";
-    font-weight: 700;
 }
 
 .nav-menu {
@@ -24,35 +23,84 @@
     list-style-type: none;
     line-height: 1;
     margin-right: 60px;
+    &__item:not(:last-child) {
+        padding-right: 30px;
+    }
 }
 
 .moves {
     display: flex;
-}
-
-.nav-menu__item:not(:last-child) {
-    padding-right: 30px;
-}
-
-.moves__item:not(:last-child) {
-    display: block;
-    margin-right: 28px;
-}
-
-.moves__item-cart, .moves__item-search {
-    width: 18px;
-    height: 24px;
-    path {
-        fill: #fff;
-        transition: all .4s;
+    &__item:not(:last-child) {
+        display: block;
+        margin-right: 28px;
     }
-    &:hover {
+    &__item-cart, &__item-search {
+        width: 18px;
+        height: 24px;
         path {
-            fill: #d3c1ad;
+            fill: #fff;
+            transition: all .4s;
+        }
+        &:hover {
+            path {
+                fill: #d3c1ad;
+            }
+        }
+    }
+    &__item-search {
+        width: 24px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .nav-menu {
+        margin-right: 50px;
+        &__item:not(:last-child) {
+            padding-right: 25px;
+        }
+    }
+    .moves {
+        &__item:not(:last-child) {
+            margin-right: 24px;
+        }
+        &__item-cart, &__item-search {
+            width: 15px;
+            height: 21px;
+        }
+        &__item-search {
+            width: 21px;
         }
     }
 }
 
-.moves__item-search {
-    width: 24px;
+@media screen and (max-width: 992px) {
+    .nav-menu {
+        margin-right: 35px;
+        &__item:not(:last-child) {
+            padding-right: 15px;
+        }
+    }
+    .moves {
+        &__item:not(:last-child) {
+            margin-right: 15px;
+        }
+        &__item-cart, &__item-search {
+            width: 13px;
+            height: 19px;
+        }
+        &__item-search {
+            width: 19px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
 }

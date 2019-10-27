@@ -1,19 +1,32 @@
 .ideas {
     background-color: #fbfaf8;
-}
-
-.ideas-header {
-    margin: 0 auto;
-}
-
-.ideas-examples {
-    margin-top: 40px;
-    min-height: 480px;
-}
-
-.ideas-example {
-    max-width: 770px;
-    // &[data-example = "second"] {
-    //     background-color: #000;
-    // }
+    padding-top: 8rem;
+    &-header {
+        margin: 0 auto;
+    }
+    &-examples {
+        margin-top: 40px;
+        position: relative;
+    }
+    &-example {
+        max-width: 770px;
+        min-height: 400px;
+        position: absolute;
+        &[data-exapmle="first"] {
+            bottom: 0;
+            left: 0;
+            z-index: 7;
+        }
+        &[data-exapmle="second"] {
+            height: 480px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 9;
+        }
+        &[data-exapmle="third"] {
+            bottom: 0;
+            right: 0;
+            z-index: 8;
+        }
+    }
 }

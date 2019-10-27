@@ -18,7 +18,6 @@
             border: 1px solid #ebebeb;
             border-radius: 5px;
             display: block;
-            font-size: 14px;
             padding-bottom: 10px;
             padding-left: 25px;
             padding-right: 25px;
@@ -51,32 +50,76 @@
         background-size: cover;
         position: relative;
         height: 235px;
-    }
-    &__preview-cover {
-        background-color: rgba(17,17,17,0.7);
-        height: 100%;
-        opacity: 0;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        transition: all .4s;
+        &-icons {
+            display: flex;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            &__icon {
+                height: 26px;
+                width: 26px;
+                path {
+                    fill: #fff;
+                    transition: all .4s;
+                }
+                &:hover {
+                    path {
+                        fill: $hoverColor;
+                    }
+                }
+            }
+        }
+        &-link {
+            display: block;
+            margin-right: 30px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &-cover {
+            background-color: rgba(17,17,17,0.7);
+            height: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            transition: all .4s;
+        }
     }
     &-info {
         padding-bottom: 25px;
         padding-left: 25px;
         padding-top: 30px;
         position: relative;
+        &::after {
+            background-color: #fbfaf8;
+            content: "";
+            position: absolute;
+            height: 20px;
+            left: 20px;
+            top: 0;
+            transform: rotate(45deg) translateY(-50%);
+            transition: all .4s;
+            width: 25px;
+        }
     }
     &-title {
         color: $hoverColor;
         font-family: "Raleway-Regular";
-        font-size: 20px;
+        font-size: 2rem;
         transition: all .4s;
     }
     &-desc {
         margin-top: 10px;
         transition: all .4s;
+    }
+    &-button {
+        color: $whiteColor;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
     }
     &:hover {
         background-color: #362f2d;
@@ -93,51 +136,4 @@
             background-color: #362f2d;
         }
     }
-}
-
-.project__preview-icons {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    &-link {
-        display: block;
-        margin-right: 30px;
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-    &__icon {
-        height: 26px;
-        width: 26px;
-        path {
-            fill: #fff;
-            transition: all .4s;
-        }
-        &:hover {
-            path {
-                fill: $hoverColor;
-            }
-        }
-    }
-}
-
-.project-info::after {
-    background-color: #fbfaf8;
-    content: "";
-    position: absolute;
-    height: 20px;
-    left: 20px;
-    top: 0;
-    transform: rotate(45deg) translateY(-50%);
-    transition: all .4s;
-    width: 25px;
-}
-
-.project-button {
-    color: $whiteColor;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
 }

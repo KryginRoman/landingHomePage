@@ -4,11 +4,15 @@
     padding: 0;
 }
 
+html {
+    font-size: 10px;;
+}
+
 body {
     background-color: #000;
     color: $mainColor;
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 300;
 }
 
@@ -19,7 +23,6 @@ body {
     display: block;
     color: inherit;
     font-family: "Raleway-ExtraBold";
-    font-size: 14px;
     padding-top: 18px;
     padding-bottom: 18px;
     text-transform: uppercase;
@@ -52,8 +55,10 @@ body {
 }
 
 .container {
-    max-width: 1170px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .content-container {
@@ -65,7 +70,7 @@ body {
     display: flex;
     align-items: center;
     font-family: "Raleway-Regular";
-    font-size: 34px;
+    font-size: 3.4rem;
     &__name {
         display: block;
         letter-spacing: -1.36px;
@@ -88,8 +93,8 @@ body {
 }
 
 .section {
-    padding-bottom: 80px;
-    padding-top: 80px;
+    padding-bottom: 8rem;
+    padding-top: 8rem;
     &-header {
         max-width: 770px;
         text-align: center;
@@ -97,11 +102,11 @@ body {
     &-title {
         color: $titleColor;
         font-family: "Raleway-SemiBold";
-        font-size: 30px; 
+        font-size: 3rem; 
     }
     &-subtitle {
         font-family: "Montserrat-Light";
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 28px;
         padding-top: 20px;
     }
@@ -121,4 +126,81 @@ body {
 .nav_flex-pos_center {
     display: flex;
     justify-content: center;
+}
+
+.accent {
+    color: #959595;
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 9px;
+    }
+    .logo {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .section {
+        padding-bottom: 7rem;
+        padding-top: 7rem;
+        &-header {
+            max-width: 670px;
+        }
+        &-title {
+            font-size: 2.8rem; 
+        }
+        &-subtitle {
+            font-size: 1.4rem;
+        }
+    }
+} 
+
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 3rem;
+    }
+    .button {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        width: 150px;
+    }
+    .section {
+        padding-bottom: 6rem;
+        padding-top: 6rem;
+        &-header {
+            max-width: 490px;
+        }
+        &-title {
+            font-size: 2.6rem; 
+        }
+        &-subtitle {
+            padding-top: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .section {
+        padding-bottom: 5rem;
+        padding-top: 5rem;
+        &-header {
+            max-width: 420px;
+        }
+        &-title {
+            font-size: 2.5rem; 
+        }
+        &-subtitle {
+            padding-top: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .button {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        width: 140px;
+    }
 }
