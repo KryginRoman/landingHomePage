@@ -25,3 +25,57 @@
         color: $whiteColor; 
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .wordpress-them {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    .wordpress {
+        &-title {
+            font-size: 2.6rem;
+        }
+        &-subtitle {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wordpress-them {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .wordpress {
+        &-title {
+            font-size: 2.2rem;
+        }
+        &-subtitle {
+            font-size: 1.4rem;
+            margin-top: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .wordpress-them {
+        padding-top: 2.2rem;
+        padding-bottom: 2.2rem;
+        &__container {
+            display: block;
+        }
+    }
+    .wordpress {
+        &-header {
+            text-align: center;
+        }
+        &-title {
+            font-size: 2rem;
+        }
+        &-button {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+    }
+}

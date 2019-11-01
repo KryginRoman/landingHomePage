@@ -30,9 +30,26 @@
 
 .moves {
     display: flex;
-    &__item:not(:last-child) {
+    &__item {
         display: block;
         margin-right: 28px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            .moves__item-cart, .moves__item-search {
+                path {
+                    fill: #d3c1ad;
+                }
+            }
+        }
+        &:focus {
+            .moves__item-cart, .moves__item-search {
+                path {
+                    fill: #d3c1ad;
+                }
+            }
+        }
     }
     &__item-cart, &__item-search {
         width: 18px;
@@ -40,11 +57,6 @@
         path {
             fill: #fff;
             transition: all .4s;
-        }
-        &:hover {
-            path {
-                fill: #d3c1ad;
-            }
         }
     }
     &__item-search {

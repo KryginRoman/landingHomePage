@@ -4,7 +4,7 @@
     color: #fff;
     font-family: "Montserrat-Light";
     position: relative;
-    min-height: 700px;
+    height: 100vh;
     &::after {
         background-color: rgba(0,0,0,0.5);
         content: "";
@@ -15,7 +15,7 @@
         top: 0;
     }
     &-container {
-        max-width: 570px;
+        width: 570px;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -23,16 +23,8 @@
         transform: translate(-50%, -50%);
         z-index: 4;
     }
-    &-play {
-        align-items: center;
-        background-color: rgba(0,0,0,0.2);
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        height: 100px;
-        justify-content: center;
-        margin: 0 auto;
-        width: 100px;
+    &__link {
+        display: block;
         &:hover {
             .video-present-play__icon {
                 path {
@@ -40,6 +32,23 @@
                 }
             }
         }
+        &:focus {
+            .video-present-play__icon {
+                path {
+                    fill: $hoverColor;
+                }
+            }
+        }
+    }
+    &-play {
+        align-items: center;
+        background-color: rgba(0,0,0,0.2);
+        border-radius: 50%;
+        display: flex;
+        height: 100px;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100px;
         &__icon {
             height: 70px;
             width: 70px;
@@ -65,5 +74,76 @@
         display: block;
         font-family: "Montserrat-Regular";
         margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .video-present {
+        &-play {
+            height: 80px;
+            width: 80px;
+            &__icon {
+                height: 50px;
+                width: 50px;
+            }
+        }
+        &-info {
+            margin-top: 30px;
+        }
+        &__title {
+            font-family: "Raleway-Medium";
+            font-size: 2.8rem;
+        }
+        &__desc {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-present {
+        &-container {
+            width: 530px;
+        }
+        &-play {
+            height: 70px;
+            width: 70px;
+            &__icon {
+                height: 70px;
+                width: 70px;
+            }
+        }
+        &-info {
+            margin-top: 25px;
+        }
+        &__title {
+            font-size: 2.6rem;
+        }
+        &__desc {
+            margin-top: 20px;
+        }
+        &__time {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .video-present {
+        &-container {
+            width: 340px;
+        }
+        &-info {
+            margin-top: 20px;
+        }
+        &__title {
+            font-size: 2.5rem;
+        }
+        &__desc {
+            margin-top: 15px;
+        }
+        &__time {
+            margin-top: 15px;
+        }
     }
 }

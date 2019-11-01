@@ -30,3 +30,62 @@
         }
     }
 }
+
+@media screen and (max-width: 992px) {
+    .ideas {
+        padding-top: 7rem;
+        &-examples {
+            margin-top: 30px;
+        }
+        &-example {
+            &[data-exapmle="first"] {
+                display: none;
+            }
+            &[data-exapmle="third"] {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ideas {
+        padding-top: 6rem;
+        &-examples {
+            margin-top: 25px;
+        }
+        &-example {
+            width: 100%;
+            min-height: 410px;
+            &[data-exapmle="second"] {
+                height: 410px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .ideas {
+        padding-top: 5rem;
+        &-examples {
+            margin-top: 20px;
+        }
+        &-example {
+            min-height: 320px;
+            &[data-exapmle="second"] {
+                height: 320px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ideas {
+        &-example {
+            min-height: 270px;
+            &[data-exapmle="second"] {
+                height: 270px;
+            }
+        }
+    }
+}

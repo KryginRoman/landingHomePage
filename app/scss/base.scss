@@ -33,6 +33,9 @@ body {
     &:hover {
         background-color: $hoverColor;
     }
+    &:focus {
+        background-color: $hoverColor;
+    }
 }
 
 .read-button {
@@ -41,6 +44,7 @@ body {
     padding-right: 15px;
     position: relative;
     text-decoration: none;
+    transition: all .4s;
     &__svg  {
         height: 8px;
         position: absolute;
@@ -50,6 +54,7 @@ body {
         transform: translateY(-50%);
         path {
             fill: $whiteColor;
+            transition: all .4s;
         }
     }
 }
@@ -82,6 +87,9 @@ body {
     text-decoration: none;
     transition: color .4s;
     &:hover {
+        color: $hoverColor;
+    }
+    &:focus {
         color: $hoverColor;
     }
 }
