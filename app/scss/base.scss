@@ -59,6 +59,73 @@ body {
     }
 }
 
+.toggle-button {
+    background-color: $whiteColor;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    transition: all .4s;
+    &__line {
+        background-color: #000;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 2px;
+        width: 15px;
+        transform: translate(-50%, -50%);
+        transition: all .4s;
+        transform-origin: 0 0;
+        &[data-pos="top"] {
+            margin-top: -4px;
+        }
+        &[data-pos="bottom"] {
+            margin-top: 4px;
+        }
+    }
+    &:hover {
+        background-color: $hoverColor;
+        .toggle-button__line {
+            background-color: $whiteColor;
+        }
+    }
+    &:focus {
+        background-color: $hoverColor;
+        .toggle-button__line {
+            background-color: $whiteColor;
+        }
+    }
+}
+
+.toggle-active {
+    .toggle-button__line {
+        &[data-pos="top"] {
+            transform: rotate(45deg) translate(-50%, -50%);
+            margin-top: 0;
+        }
+        &[data-pos="center"] {
+            height: 0;
+        }
+        &[data-pos="bottom"] {
+            transform: rotate(-45deg) translate(-50%, -50%);
+            margin-top: 0;
+        }
+    }
+}
+
+.scroll-top-button {
+    background-color: $whiteColor;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    z-index: 99;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;

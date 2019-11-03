@@ -5,24 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Waxom</title>
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="./css/lib.min.css">
+    <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
-    <header class="header container">
+    <div class="scroll-top-button"></div>
+    <header class="header container" data-name="header">
         <div class="logo">
             <object data="svg/logo/logos.svg" type="image/svg+xml"></object>
             <span class="logo__name">Waxom</span>
         </div>
         <nav class="nav-panel">
+            <div class="nav-toggle">
+                <a href="#!" class="toggle-button">
+                    <span class="toggle-button__line" data-pos="top"></span>
+                    <span class="toggle-button__line" data-pos="center"></span>
+                    <span class="toggle-button__line" data-pos="bottom"></span>
+                </a>
+            </div>
             <ul class="nav-menu">
-                <li class="nav-menu__item"><a href="#!" class="link">Home</a></li>
-                <li class="nav-menu__item"><a href="#!" class="link">About Us</a></li>
-                <li class="nav-menu__item"><a href="#!" class="link">Portfolio</a></li>
-                <li class="nav-menu__item"><a href="#!" class="link">Features</a></li>
-                <li class="nav-menu__item"><a href="#!" class="link">Blog</a></li>
-                <li class="nav-menu__item"><a href="#!" class="link">Pricing</a></li>
-                <li class="nav-menu__item"><a href="#!" class="link">Shortcodes</a></li>
-                <li class="nav-menu__item"><a href="#!" class="link">Contact</a></li>
+                <li class="nav-menu__item"><a href="#!" class="link nav-menu__link" data-path="header">Home</a></li>
+                <li class="nav-menu__item"><a href="#!" class="link nav-menu__link" data-path="service">About Us</a></li>
+                <li class="nav-menu__item"><a href="#!" class="link nav-menu__link" data-path="project">Portfolio</a></li>
+                <li class="nav-menu__item"><a href="#!" class="link nav-menu__link" data-path="video-present">Features</a></li>
+                <li class="nav-menu__item"><a href="#!" class="link nav-menu__link" data-path="posts">Blog</a></li>
+                <li class="nav-menu__item"><a href="#!" class="link nav-menu__link" data-path="service">Pricing</a></li>
+                <li class="nav-menu__item"><a href="#!" class="link nav-menu__link" data-path="service">Shortcodes</a></li>
+                <li class="nav-menu__item"><a href="#!" class="link nav-menu__link" data-path="footer">Contact</a></li>
             </ul>
             <div class="moves">
                 <a href="#!" class="moves__item link">
@@ -56,6 +65,46 @@
                     <a href="#!" class="button slider-content__button">get started</a>
                 </div>  
             </li>
+            <li class="slider-item">
+                <div class="slider-content">
+                    <h2 class="slider-content__slogan">Unique and Modern Design</h2>
+                    <h1 class="slider-content__header">Portfolio and <span class="uppercase">psd</span> Template</h1>
+                    <p class="slider-content__desc">
+                        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+                    </p>
+                    <a href="#!" class="button slider-content__button">get started</a>
+                </div>  
+            </li>
+            <li class="slider-item">
+                <div class="slider-content">
+                    <h2 class="slider-content__slogan">Unique and Modern Design</h2>
+                    <h1 class="slider-content__header">Portfolio and <span class="uppercase">psd</span> Template</h1>
+                    <p class="slider-content__desc">
+                        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+                    </p>
+                    <a href="#!" class="button slider-content__button">get started</a>
+                </div>  
+            </li>
+            <li class="slider-item">
+                <div class="slider-content">
+                    <h2 class="slider-content__slogan">Unique and Modern Design</h2>
+                    <h1 class="slider-content__header">Portfolio and <span class="uppercase">psd</span> Template</h1>
+                    <p class="slider-content__desc">
+                        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+                    </p>
+                    <a href="#!" class="button slider-content__button">get started</a>
+                </div>  
+            </li>
+            <li class="slider-item">
+                <div class="slider-content">
+                    <h2 class="slider-content__slogan">Unique and Modern Design</h2>
+                    <h1 class="slider-content__header">Portfolio and <span class="uppercase">psd</span> Template</h1>
+                    <p class="slider-content__desc">
+                        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+                    </p>
+                    <a href="#!" class="button slider-content__button">get started</a>
+                </div>  
+            </li>
         </ul>
         <div class="slider-arrows">
             <a href="#!" class="slider-arrows__left">
@@ -75,26 +124,9 @@
                 </svg>
             </a>
         </div>
-        <ul class="slider-dots">
-            <li class="slider-dots__item">
-                <a href="#!" class="slider-dots__link"></a>
-            </li>
-            <li class="slider-dots__item">
-                <a href="#!" class="slider-dots__link"></a>
-            </li>
-            <li class="slider-dots__item">
-                <a href="#!" class="slider-dots__link"></a>
-            </li>
-            <li class="slider-dots__item">
-                <a href="#!" class="slider-dots__link"></a>
-            </li>
-            <li class="slider-dots__item">
-                <a href="#!" class="slider-dots__link"></a>
-            </li>
-        </ul>
     </section>
     <main>
-        <section class="service section">
+        <section class="service section" data-name="service">
             <div class="container">
                 <ul class="service-list">
                     <li class="service-cart">
@@ -156,7 +188,7 @@
                 </ul>
             </div>
         </section>
-        <section class="ideas">
+        <section class="ideas" data-name="ideas">
             <div class="container">
                 <div class="section-header ideas-header">
                     <h2 class="section-title">
@@ -178,7 +210,7 @@
                     </div>
                 </div>
         </section>
-        <section class="small-section wordpress-them">
+        <section class="small-section wordpress-them" data-name="wordpress-them">
             <div class="container wordpress-them__container">
                 <div class="wordpress-header">
                     <h4 class="wordpress-title">
@@ -191,7 +223,7 @@
                 <a href="#!" class="button wordpress-button">Purchase Now</a>
             </div>
         </section>
-        <section class="projects section">
+        <section class="projects section" data-name="projects">
             <div class="container">
                 <div class="section-header projects-header">
                     <h3 class="section-title">
@@ -419,7 +451,7 @@
                 </div>
             </div>
         </section>
-        <section class="video-present">
+        <section class="video-present" data-name="video-present">
             <div class="video-present-container">
                 <div class="video-present-play">
                         <a href="#!" class="video-present__link">
@@ -442,7 +474,7 @@
                 </div>
             </div>
         </section>
-        <section class="mobile-adaptation">
+        <section class="mobile-adaptation" data-name="mobile-adaptation">
             <div class="container mobile-container">
                 <div class="mobile-content">
                     <h3 class="section-title">
@@ -490,7 +522,7 @@
                 </div>
             </div>
         </section>
-        <section class="small-section statistic">
+        <section class="small-section statistic" data-name="statistic">
             <div class="container">
                 <ul class="statistic-counters">
                     <li class="statistic-counter">
@@ -576,7 +608,7 @@
                 </ul>
             </div>
         </section>
-        <section class="section posts">
+        <section class="section posts" data-name="posts">
             <div class="container">
                 <div class="section-header posts-header">
                     <h3 class="section-title">
@@ -681,6 +713,37 @@
                             </div>
                         </figure>
                     </li>
+                    <li class="post-item">
+                        <figure class="post">
+                            <div class="post-img">
+                                <img src="./images/resent_pots/post2.jpg" alt="post-img" class="image">
+                                <div class="post-img__cover"></div>
+                            </div>
+                            <div class="post-date">
+                                <span class="post-date__day">30</span>
+                                <span class="post-date__month">Sep</span>
+                            </div>
+                            <div class="post-content">
+                                <p class="post__title">
+                                    Lorem ipsum dolor sit amet
+                                </p>
+                                <figcaption class="post__text">
+                                    <p>
+                                        Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+                                    </p>
+                                </figcaption>
+                                <a href="#!" class="read-button post__button">
+                                    <span>Read More</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="read-button__svg post__svg" viewBox="0 0 5 8">
+                                        <g><g>
+                                            <path d="M.951 7.815l3.834-3.467a.462.462 0 0 0 0-.7l-.02-.011L.95.177a.595.595 0 0 0-.777 0L.17.185a.47.47 0 0 0-.167.354v6.918c0 .141.068.268.173.358l-.002.001a.594.594 0 0 0 .777 0z"/>
+                                            <path d="M.951 7.815l3.834-3.467a.462.462 0 0 0 0-.7l-.02-.011L.95.177a.595.595 0 0 0-.777 0L.17.185a.47.47 0 0 0-.167.354v6.918c0 .141.068.268.173.358l-.002.001a.594.594 0 0 0 .777 0z"/>
+                                        </g></g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </figure>
+                    </li>
                 </ul>
                 <div class="post-arrows">
                     <a href="#!" class="post-arrows__item post-arrows__item_left">
@@ -696,7 +759,7 @@
                  </div>
             </div>
         </section>
-        <section class="partners">
+        <section class="partners" data-name="partners">
             <div class="container partners-container">
                 <ul class="partners-list">
                     <li class="partners-list__item">
@@ -723,7 +786,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" data-name="footer">
         <div class="container">
             <ul class="section footer-info">
                 <li class="footer-column">
@@ -866,5 +929,7 @@
             </div>
         </div>
     </footer>
+    <script src="./script/lib.min.js"></script>
+    <script src="./script/commons.js"></script>
 </body>
 </html>

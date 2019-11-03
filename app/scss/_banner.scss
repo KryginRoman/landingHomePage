@@ -91,28 +91,38 @@
         bottom: 40px;
         left: 50%;
         transform: translateX(-50%);
-        &__item {
+        li {
             margin-right: 10px;
+            position: relative;
             &:last-child {
                 margin-right: 0;
             }
-        }
-        &__link {
-            background-color: #fff;
-            border: 2px solid transparent;
-            border-radius: 50%;
-            display: block;
-            height: 12px;
-            opacity: .5;
-            transition: all .4s;
-            width: 12px;
+            &::after {
+                content: "";
+                cursor: pointer;
+                background-color: #fff;
+                border: 2px solid transparent;
+                border-radius: 50%;
+                display: block;
+                height: 10px;
+                opacity: .5;
+                transition: all .4s;
+                width: 10px;
+            }
             &:hover {
-                background-color: transparent;
-                border-color: #d3c1ad;
+                &::after {
+                    background-color: transparent;
+                    border-color: #d3c1ad;
+                }
             }
             &:focus {
-                background-color: transparent;
-                border-color: #d3c1ad;
+                &::before {
+                    background-color: transparent;
+                    border-color: #d3c1ad;
+                }
+            }
+            button {
+                display: none;
             }
         }
     }
@@ -168,13 +178,15 @@
         }
         &-dots {
             bottom: 30px;
-            &__item {
-                height: 10px;
+            li {
                 margin-right: 8px;
-                width: 10px;
-            }
-            &__item:last-child {
-                margin-right: 0;
+                &:last-child {
+                    margin-right: 0;
+                }
+                &::after {
+                    height: 8px;
+                    width: 8px;
+                }
             }
         }
     }
