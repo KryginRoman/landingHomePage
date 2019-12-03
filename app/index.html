@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
-    <div class="scroll-top-button"></div>
+    <div class="scroll-top-button">
+        <svg enable-background="new 0 0 24 24" id="Layer_1" version="1.0" class="scroll-top-button__svg" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <polyline fill="none" points="3,15.5 12,6.5 21,15.5 " stroke="#000000" stroke-miterlimit="10" stroke-width="2"/>
+        </svg>
+    </div>
     <header class="header container" data-name="header">
         <div class="logo">
             <object data="svg/logo/logos.svg" type="image/svg+xml"></object>
@@ -237,24 +241,24 @@
                     <nav class="nav_flex-pos_center">
                         <ul class="projects-nav">
                             <li class="projects-nav__item">
-                                <a href="#!" class="projects-nav__link">All</a>
+                                <a href="#!" class="projects-nav__link" data-presentation="all">All</a>
                             </li>
                             <li class="projects-nav__item">
-                                <a href="#!" class="projects-nav__link">Web Design</a>
+                                <a href="#!" class="projects-nav__link" data-presentation="web-design">Web Design</a>
                             </li>
                             <li class="projects-nav__item">
-                                <a href="#!" class="projects-nav__link">Mobile App</a>
+                                <a href="#!" class="projects-nav__link" data-presentation="mobile-app">Mobile App</a>
                             </li>
                             <li class="projects-nav__item">
-                                <a href="#!" class="projects-nav__link">Illustration</a>
+                                <a href="#!" class="projects-nav__link" data-presentation="illustration">Illustration</a>
                             </li>
                             <li class="projects-nav__item">
-                                <a href="#!" class="projects-nav__link">Photography</a>
+                                <a href="#!" class="projects-nav__link" data-presentation="photography">Photography</a>
                             </li>
                         </ul>
                     </nav>
                     <ul class="projects-list">
-                        <li class="project">
+                        <li class="project" data-value="photography">
                             <div class="project__preview" style="background-image: url(./images/projects/project1.jpg)">
                                 <div class="project__preview-cover">
                                     <div class="project__preview-icons">
@@ -286,7 +290,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="project">
+                        <li class="project" data-value="web-design">
                             <div class="project__preview" style="background-image: url(./images/projects/project2.jpg)">
                                 <div class="project__preview-cover">
                                     <div class="project__preview-icons">
@@ -318,7 +322,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="project">
+                        <li class="project" data-value="photography">
                             <div class="project__preview" style="background-image: url(./images/projects/project3.jpg)">
                                 <div class="project__preview-cover">
                                     <div class="project__preview-icons">
@@ -350,7 +354,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="project">
+                        <li class="project" data-value="photography">
                             <div class="project__preview" style="background-image: url(./images/projects/project4.jpg)">
                                 <div class="project__preview-cover">
                                     <div class="project__preview-icons">
@@ -382,7 +386,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="project">
+                        <li class="project" data-value="web-design">
                             <div class="project__preview" style="background-image: url(./images/projects/project5.jpg)">
                                 <div class="project__preview-cover">
                                     <div class="project__preview-icons">
@@ -414,7 +418,7 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="project">
+                        <li class="project" data-value="photography">
                             <div class="project__preview" style="background-image: url(./images/projects/project6.jpg)">
                                 <div class="project__preview-cover">
                                     <div class="project__preview-icons">

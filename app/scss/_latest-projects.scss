@@ -153,6 +153,14 @@
     }
 }
 
+// .show-project {
+//     display: block;
+// }
+
+.hide-project {
+    display: none;
+}
+
 @media screen and (max-width: 992px) {
     .projects {
         &-container {
