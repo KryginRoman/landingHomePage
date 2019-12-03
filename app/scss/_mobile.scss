@@ -1,0 +1,112 @@
+.mobile-adaptation {
+    background-image: url(../images/mobile/iphone.png);
+    background-repeat: no-repeat;
+    background-position-x: 22.01%;
+    background-position-y: 75px;
+    background-size: 420px 615px;
+    font-family: "Montserrat-Light";
+    background-color: #fbfaf8;
+    padding-bottom: 18.5rem;
+    padding-top: 18.5rem;
+}
+
+.mobile-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mobile-content {
+    width: 670px;
+}
+
+.mobile-description {
+    font-size: 1.6rem;
+    padding-top: 35px;
+}
+
+.mobile-list {
+    list-style: none;
+    padding-left: 50px;
+    padding-top: 40px;
+    &__item {
+        margin-bottom: 12px;
+        padding-left: 50px;
+        position: relative;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__arrow {
+        background-color: $hoverColor;
+        border-radius: 50%;
+        height: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+    }
+    &__svg {
+        fill: #fff;
+        height: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-45%, -50%);
+        width: 16px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .mobile-adaptation {
+        background-size: 320px 515px;
+        background-position-x: 11.01%;
+        background-position-y: 75px;
+        padding-bottom: 16.5rem;
+        padding-top: 16.5rem;
+    }
+    .mobile-content {
+        width: 650px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .mobile-adaptation {
+        background-image: none;
+        padding-bottom: 7rem;
+        padding-top: 7rem;
+    }
+    .mobile-container {
+        justify-content: flex-start;
+    }
+    .mobile-description {
+        font-size: 1.5rem;
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-adaptation {
+        padding-bottom: 5rem;
+        padding-top: 5rem;
+    }
+    .mobile-content {
+        width: 620px;
+    }
+    .mobile-list {
+        padding-left: 40px;
+        padding-top: 30px;
+        &__item {
+            padding-left: 40px;
+        }
+    }  
+}
+
+@media screen and (max-width: 576px) {
+    .mobile-list {
+        padding-left: 30px;
+        padding-top: 20px;
+        &__item {
+            padding-left: 30px;
+        }
+    }
+}

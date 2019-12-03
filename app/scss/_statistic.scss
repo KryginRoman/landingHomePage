@@ -1,0 +1,122 @@
+.statistic {
+    font-family: "Montserrat-Light";
+    padding-bottom: 6rem;
+    padding-top: 7rem;
+    &-counters {
+        display: flex;
+        list-style: none;
+        width: 960px;
+        margin: 0 auto;
+    }
+    &-counter {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-bottom: 25px;
+        position: relative;
+        text-align: center;
+        width: calc(20% - 30px);
+        &__icon {
+            height: 44px;
+            width: 44px;
+            margin: 0 auto;
+        }
+        &__svg  {
+            path {
+                fill: $hoverColor;
+            } 
+        }
+        &__value {
+            color: $whiteColor;
+            display: block;
+            padding-top: 25px;
+            font-size: 4.8rem;
+        }
+        &__title {
+            color: $hoverColor;
+            padding-top: 15px;
+        }
+        &::after {
+            background-color: $whiteColor;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .statistic {
+        padding-bottom: 5rem;
+        padding-top: 6rem;
+        &-counter {
+            &__icon {
+                height: 40px;
+                width: 40px;
+            }
+            &__value {
+                font-size: 4.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .statistic {
+        padding-bottom: 4.5rem;
+        padding-top: 5.5rem;
+        &-counters {
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        &-counter {
+            &__value {
+                padding-top: 20px;
+                font-size: 4.4rem;
+            }
+            &__title {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .statistic {
+        padding-bottom: 4rem;
+        padding-top: 5rem;
+        &-counter {
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            width: calc(33.333% - 30px);
+            &__value {
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .statistic {
+        &-counter {
+            width: calc(50% - 30px);
+            &__value {
+                font-size: 3.6rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .statistic {
+        &-counter {
+            width: calc(100% - 30px);
+            &__value {
+                font-size: 3.3rem;
+            }
+        }
+    }
+}
